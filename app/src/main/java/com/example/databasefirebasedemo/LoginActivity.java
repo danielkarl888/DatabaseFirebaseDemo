@@ -16,7 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextUsername;
     private EditText editTextPassword;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         // Initialize views
         editTextUsername = findViewById(R.id.editTextUsername);
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         if (isValidCredentials(username, password)) {
             // Successful login, you can navigate to the next activity or perform other actions
             // For example, you can start a new activity:
-             Intent intent = new Intent(this, HomeActivity.class);
-             startActivity(intent);
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(), "failure", Toast.LENGTH_SHORT).show();
         }

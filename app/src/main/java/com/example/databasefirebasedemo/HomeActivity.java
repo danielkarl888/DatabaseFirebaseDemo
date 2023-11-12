@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -18,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 
 public class HomeActivity extends AppCompatActivity {
     Button logout;
+
+    Button addEmployeeBtn;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
 
@@ -26,6 +27,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initGoogleAuthLogOut();
+        addEmployeeBtn = findViewById(R.id.addEmployeeBtn);
+        addEmployeeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), EmployeeActivity.class));
+            }
+        });
     }
 
     private void initGoogleAuthLogOut(){
@@ -49,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 finish();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
     }
