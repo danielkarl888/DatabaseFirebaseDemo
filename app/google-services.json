@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "53465108562",
+    "project_id": "databasefirebasedemo-cd7ad",
+    "storage_bucket": "databasefirebasedemo-cd7ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53465108562:android:83970722e2b5cf3d42cf8b",
+        "android_client_info": {
+          "package_name": "com.example.databasefirebasedemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUxbFGyVaQHJydAlz1pBMtRtVQrhNPxzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
